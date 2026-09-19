@@ -3,7 +3,7 @@
   --accent-color: rgb(55, 80, 163);
   --accent-color-lighter: rgb(68, 89, 195);
   --font-color-primary: rgb(205, 205, 205);
-  --font-color-secondary: rgb(123, 123, 123);
+  --font-color-secondary: rgb(190, 190, 190);
 }
 
 body, p, h1 {
@@ -15,6 +15,10 @@ body {
   font-size: 24px;
   color: var(--font-color-primary);
   background-color: var(--primary-color);
+}
+
+p {
+  color: var(--font-color-secondary);
 }
 
 .add-to-server {
