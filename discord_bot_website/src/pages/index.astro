@@ -4,15 +4,23 @@ import '../components/css/index.css'
 ---
 
 <Layout title="Hello">
-    <div>
-        <p>This is a web application that enables the integration of our Discord bot to your Discord server.</p>
+    <div class="background-image-container">
+        <img src="src/assets/backgrounds/mountains-background.png" class="mountains-background">
     </div>
     <div>
-        <h1>What does it do?</h1>
-        <p>PLACEHOLDER</p>
+        <div class="greeting">
+            <h1>Welcome.</h1>
+            <p>Get started below.</p>
+        </div>
+        <div id="blocks" class="blocks">
+            <div id="about" class="block"></div>
+            <div id="tutorial" class="block"></div>
+            <div id="something-else" class="block"></div>
+        </div>
+        <div class="add-to-server-button-container">
+                <button id="add-to-server-button" class="add-to-server">Add to server</button>
+        </div>
     </div>
-    <div>
-        <button id="add-to-server-button" class="add-to-server">Add to server</button>
-    </div>
+
     <script src="../components/scripts/index.ts"></script>
 </Layout>
