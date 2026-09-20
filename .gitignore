@@ -5,3 +5,9 @@ node_modules/
 dist/
 .env
 .env.*
+
+# go packages
+.exe
+
+# cache files
+*cache*
