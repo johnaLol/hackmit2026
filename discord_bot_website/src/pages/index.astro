@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import '../components/css/index.css'
 ---
 
-<Layout title="Hello">
+<Layout title="Village Atlas">
     <div class="background-image-container">
         <img src="src/assets/backgrounds/mountains-background.png" class="mountains-background">
     </div>
@@ -13,14 +13,13 @@ import '../components/css/index.css'
             <p>Get started below.</p>
         </div>
         <div id="blocks" class="blocks">
-            <div id="about" class="block"></div>
+            <div id="description" class="block"></div>
             <div id="tutorial" class="block"></div>
-            <div id="something-else" class="block"></div>
+            <div id="spectating" class="block"></div>
         </div>
-        <div class="add-to-server-button-container">
-                <button id="add-to-server-button" class="add-to-server">Add to server</button>
+        <div class="button-container">
+            <button id="add-to-server-button" class="add-to-server">Add to server</button>
+            <button id="spectate-button" class="spectate"><span></span>Spectate</button>
         </div>
     </div>
-
-    <script src="../components/scripts/index.ts"></script>
 </Layout>

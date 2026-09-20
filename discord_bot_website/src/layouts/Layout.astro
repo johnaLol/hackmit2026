@@ -1,6 +1,7 @@
 ---
 const {title} = Astro.props;
 import '../components/css/header.css'
+import '../components/css/read-more.css'
 ---
 
 <!doctype html>
@@ -18,7 +19,7 @@ import '../components/css/header.css'
             <div class="header-content-container">
                 <div>
                     <div></div>
-                    <span class="bot-title">Village Atlas</span>
+                    <span id="bot-title" class="bot-title">Village Atlas</span>
                 </div>
                 <div>
                     <button class="log-in-with-discord-button">Log in with Discord</button>
@@ -26,5 +27,7 @@ import '../components/css/header.css'
             </div>
         </div>
 		<slot />
+        <script src="../components/scripts/index.ts"></script>
+        <script src="../components/scripts/header.ts"></script>
 	</body>
 </html>

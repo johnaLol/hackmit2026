@@ -2,6 +2,8 @@
   --header-color: rgb(57, 67, 53);
   --button-color: rgb(55, 80, 163);
   --button-color-lighter: rgb(68, 89, 195);
+    --font-color-primary: rgb(205, 205, 205);
+  --font-color-secondary: rgb(190, 190, 190);
 }
 
 .header {
@@ -24,6 +26,7 @@
 
 .bot-title {
   font-size: 32px;
+  cursor: pointer;
 }
 
 .log-in-with-discord-button {
@@ -32,7 +35,7 @@
   border: none;
   border-radius: 16px;
   background-color: var(--button-color);
-  color: rgb(205, 205, 205);
+  color: var(--font-color-primary);
   padding: .65em 1.15em;
   transition: background-color 200ms;
   cursor: pointer;

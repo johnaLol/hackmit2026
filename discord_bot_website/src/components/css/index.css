@@ -1,10 +1,13 @@
 :root {
   --primary-color: rgb(78, 102, 79);
   --primary-color-darker: rgb(66, 86, 71);
-  --accent-color: rgb(55, 80, 163);
-  --accent-color-lighter: rgb(68, 89, 195);
+  --primary-accent-color: rgb(55, 80, 163);
+  --primary-accent-color-lighter: rgb(68, 89, 195);
+  --secondary-accent-color: rgb(180, 180, 180);
+  --secondary-accent-color-darker: rgb(150, 150, 150);
   --font-color-primary: rgb(205, 205, 205);
   --font-color-secondary: rgb(190, 190, 190);
+  --font-color-tertiary: rgb(64, 64, 64);
 }
 
 html {
@@ -55,14 +58,17 @@ p {
   margin-top: 3em;
 }
 
-.greeting, .add-to-server-button-container {
+.greeting {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 3em;
 }
 
-.greeting {
-  margin-bottom: 3em;
+.button-container {
+  display: flex;
+  gap: 3em;
+  justify-content: center;
 }
 
 .blocks {
@@ -88,19 +94,31 @@ p {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .6);
 }
 
-.add-to-server {
+.add-to-server, .spectate {
   margin-top: 2em;
   font-size: 20px;
   font-weight: 500;
   border: none;
   border-radius: 16px;
-  background-color: var(--accent-color);
-  color: rgb(205, 205, 205);
   padding: .65em 1.15em;
   transition: background-color 200ms;
   cursor: pointer;
 }
 
+.add-to-server {
+  color: rgb(205, 205, 205);
+  background-color: var(--primary-accent-color);
+}
+
 .add-to-server:hover {
-  background-color: var(--accent-color-lighter);
+  background-color: var(--primary-accent-color-lighter);
+}
+
+.spectate {
+  color: var(--font-color-tertiary);
+  background-color: var(--secondary-accent-color);
+}
+
+.spectate:hover {
+  background-color: var(--secondary-accent-color-darker);
 }
