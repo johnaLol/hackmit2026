@@ -3,11 +3,14 @@
   --primary-color-darker: rgb(66, 86, 71);
   --accent-color: rgb(55, 80, 163);
   --accent-color-lighter: rgb(68, 89, 195);
+  --secondary-accent-color: rgb(180, 180, 180);
   --font-color-primary: rgb(205, 205, 205);
   --font-color-secondary: rgb(190, 190, 190);
+  --font-color-tertiary: rgb(64, 64, 64);
 }
 
 body {
+  margin-top: 1em;
   align-items: center;
 }
 
@@ -20,17 +23,22 @@ body {
 .control-container {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+.world-map {
+  width: 38em;
+  height: 21.375em;
+  object-fit: contain;
 }
 
 .arrow-buttons {
-
+  color: var(--font-color-tertiary);
+  background-color: var(--secondary-accent-color);
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 16px;
+  padding: .65em 1.15em;
+  cursor: pointer;
 }

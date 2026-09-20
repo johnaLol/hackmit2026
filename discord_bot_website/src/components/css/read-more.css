@@ -1,5 +1,9 @@
 :root {
-  --background-color: rgb(66, 86, 71);
+  --exit-color: rgb(165, 0, 0);
+  --primary-color: rgb(78, 102, 79);
+  --primary-color-darker: rgb(66, 86, 71);
+  --primary-accent-color: rgb(55, 80, 163);
+  --secondary-accent-color: rgb(180, 180, 180);
 }
 
 .expanded-screen-container {
@@ -17,7 +21,7 @@
 
 .expanded-screen-content-container {
   position: absolute;
-  background-color: var(--background-color);
+  background-color: var(--primary-color-darker);
   width: 35%;
   height: 75%;
   z-index: 100;
@@ -29,6 +33,22 @@
   overflow: scroll;
 }
 
-.close-button {
+.exit-button {
+  display: flex;
   position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 101;
+  color: var(--exit-color);
+  background-color: var(--primary-color);
+  padding: 0.3em 1em;
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 800,
+  'GRAD' 0,
+  'opsz' 24
 }

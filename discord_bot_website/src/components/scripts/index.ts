@@ -14,25 +14,19 @@ const spectatingParsed = marked.parse(spectatingMd);
 const addDiscordBotButton = document.getElementById('add-to-server-button');
 const spectateButton = document.getElementById('spectate-button');
 
-let readMoreToggleFlag = false;
 
 function drawBlocks() {
     descriptionElement!.innerHTML = `
         <h3>Description</h3>
         <p>What is this bot about?</p>
-        <span class="material-symbols-outlined">
-            question_mark
-        </span>
     `;
     tutorialElement!.innerHTML = `
         <h3>Tutorial</h3>
         <p>Overview on how to use bot</p>
-        <img>
     `;
     spectatingElement!.innerHTML = `
         <h3>Spectating</h3>
         <p>Learn more about spectating</p>
-        <img>
     `;
     addBlockEventListeners();
 }
@@ -41,6 +35,7 @@ function drawBlocks() {
 function addBlockEventListeners() {
     descriptionElement?.addEventListener('click', () => {
         createExpansionForMoreInfo(generateMarkdownProse(descriptionMdParsed));
+        console.log('hello');
     });
     tutorialElement?.addEventListener('click', () => {
         createExpansionForMoreInfo(generateMarkdownProse(tutorialMdParsed));
@@ -54,6 +49,9 @@ function addBlockEventListeners() {
 function generateMarkdownProse(parsedProse: string | Promise<string>) {
     return `
         <div class="expanded-screen-content-container">
+            <div id="exit-button" class="exit-button">
+                <span class="material-symbols-outlined">close</span>
+            </div>
             <div class="prose-block">${parsedProse}</div>
         </div>
     `
@@ -61,18 +59,14 @@ function generateMarkdownProse(parsedProse: string | Promise<string>) {
 
 
 function createExpansionForMoreInfo(paramHTML: string) {
-    if (!readMoreToggleFlag) {
-        document.body.innerHTML += `
-            <div id="expanded-screen-container" class="expanded-screen-container">
-                ${paramHTML}
-            </div>
-        `
-        document.getElementById('expanded-screen-container')!.innerHTML += paramHTML;
-        readMoreToggleFlag = true;
-    } else {
+    document.body.insertAdjacentHTML('beforeend', `
+        <div id="expanded-screen-container" class="expanded-screen-container">
+            ${paramHTML}
+        </div>
+    `);
+    document.getElementById('exit-button')?.addEventListener('click', () => {
         document.getElementById('expanded-screen-container')?.remove();
-        readMoreToggleFlag = false;
-    }
+    });
 }
 
 

@@ -53,7 +53,7 @@ p {
 }
 
 .mountains-background {
-  opacity: 0.5;
+  opacity: 0.3;
   width: 50em;
   margin-top: 3em;
 }
@@ -89,7 +89,7 @@ p {
   background-color: var(--primary-color-darker);
   padding: 12px;
   width: 8em;
-  height: 10em;
+  height: 4em;
   cursor: pointer;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .6);
 }
