@@ -23,7 +23,7 @@ async def on_ready():
                 await bot.load_extension(cog_name)
                 print(f"Loaded cog: {filename}")
             except Exception as e:
-                print(f"Failed to load {filename}: {e}")
+                print(f"Failed to load cog {filename}: {e}")
     try:
         synced = await bot.tree.sync()
         print(f"Synced {len(synced)} command(s)")

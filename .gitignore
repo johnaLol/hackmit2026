@@ -7,3 +7,9 @@ dist/
 .env.*
 package-lock.json
 package.json
+
+# go packages
+.exe
+
+# cache files
+*cache*
