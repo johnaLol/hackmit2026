@@ -5,6 +5,8 @@ node_modules/
 dist/
 .env
 .env.*
+package-lock.json
+package.json
 
 # go packages
 .exe

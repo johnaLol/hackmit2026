@@ -1,0 +1,43 @@
+:root {
+  --header-color: rgb(57, 67, 53);
+  --button-color: rgb(55, 80, 163);
+  --button-color-lighter: rgb(68, 89, 195);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3em;
+  background-color: var(--header-color);
+}
+
+.header-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+}
+
+.bot-title {
+  font-size: 32px;
+}
+
+.log-in-with-discord-button {
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 16px;
+  background-color: var(--button-color);
+  color: rgb(205, 205, 205);
+  padding: .65em 1.15em;
+  transition: background-color 200ms;
+  cursor: pointer;
+}
+
+.log-in-with-discord-button:hover {
+  background-color: var(--button-color-lighter);
+}

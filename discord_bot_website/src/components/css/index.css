@@ -1,28 +1,96 @@
 :root {
   --primary-color: rgb(78, 102, 79);
+  --primary-color-darker: rgb(66, 86, 71);
   --accent-color: rgb(55, 80, 163);
   --accent-color-lighter: rgb(68, 89, 195);
   --font-color-primary: rgb(205, 205, 205);
   --font-color-secondary: rgb(190, 190, 190);
 }
 
-body, p, h1 {
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
 body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
   color: var(--font-color-primary);
   background-color: var(--primary-color);
+  overflow: hidden;
+  margin-top: 2em;
+}
+
+body > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.greeting > h1 {
+  font-size: 84px;
+  margin-bottom: 0.25em;
 }
 
 p {
   color: var(--font-color-secondary);
 }
 
+.background-image-container {
+  z-index: -100;
+  position: fixed;
+}
+
+.mountains-background {
+  opacity: 0.5;
+  width: 50em;
+  margin-top: 3em;
+}
+
+.greeting, .add-to-server-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.greeting {
+  margin-bottom: 3em;
+}
+
+.blocks {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.blocks > div > h3 {
+  margin-bottom: 0.5em;
+}
+
+.blocks > div > p {
+  font-size: 14px;
+}
+
+.block {
+  background-color: var(--primary-color-darker);
+  padding: 12px;
+  width: 8em;
+  height: 10em;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .6);
+}
+
 .add-to-server {
-  font-size: 24px;
+  margin-top: 2em;
+  font-size: 20px;
   font-weight: 500;
   border: none;
   border-radius: 16px;
